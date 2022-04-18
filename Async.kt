@@ -7,16 +7,16 @@ fun main(){
     runBlocking {
         val obj=async {
             println("start")
-            repeat(100){
-                println("i--->${i++}")
+            repeat(100){                            // repeat loop 100 times
+                println("i--->${i++}")               
                 delay(100)
             }
-            i
+            i                                        // deferred object value
         }
         try {
-            delay(200)
+           // delay(200)
             obj.cancelAndJoin()
-            println(obj.await())
+            println(obj.await())                      // print deferred object value
             println("end")
         }
         catch (e:CancellationException){
