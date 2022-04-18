@@ -12,7 +12,7 @@ class JobObject {
 //            delay(1000)                        // job object
 //            println("processing")
 //        }
-//        job.join()
+//        job.join()                            // join after completion process
 //        delay(2000)
 //        println("end")
 //    }
@@ -31,8 +31,8 @@ fun main(){
             println("processing")
         }
         //delay(1000)
-        delay(2000)
-        job.cancel()
+        delay(2000)                         // delay 2 secs
+        job.cancel()                          // after delay then cancel process
         println("end")
 
     }
@@ -49,7 +49,7 @@ fun main(){
 //            }
 //        }
 //        delay(200)
-//        job.cancelAndJoin()
+//        job.cancelAndJoin()                     // after delay cancel process and execute process
 //        println("end")
 //    }
 //}
